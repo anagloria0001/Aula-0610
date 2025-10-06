@@ -1,0 +1,9 @@
+public class Cliente {
+
+    String nome;
+    String cpf;
+
+    void show(){
+        System.out.println("Correntista(" + this.cpf + "):" + this.nome);
+    }
+}
