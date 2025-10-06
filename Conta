@@ -1,0 +1,22 @@
+public class Conta {
+
+    String numero;
+    String agencia;
+    double saldo;
+    Cliente correntista;
+
+    void debitar(double valor){
+        this.saldo -= valor;
+    }
+
+    void creditar(double valor){
+        this.saldo += valor;
+    }
+
+    void show(){
+       System.out.println("Agencia :" + this.agencia);
+       System.out.println("Conta :" + this.numero);
+       System.out.println("Saldo :" + this.saldo);
+       this.correntista.show();
+      }
+}
