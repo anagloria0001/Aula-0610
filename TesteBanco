@@ -1,0 +1,36 @@
+public class TesteBanco {
+
+    public static void main(String[] args){
+
+
+
+
+
+        Cliente fernando = new Cliente();
+        fernando.cpf = "111.111.111-11";
+        fernando.nome = "Fernando Trinta";
+
+        Cliente cicrano = new Cliente();
+        cicrano.cpf = "111.111.111-22";
+        cicrano.nome = "Cicrano da Silva";
+
+        Conta contaF30 = new Conta();
+        contaF30.agencia = "0030";
+        contaF30.numero = "0030-3";
+        contaF30.saldo = 50000;
+        contaF30.correntista = fernando;
+
+        Conta conta2 = new Conta();
+        conta2.agencia = "0020";
+        conta2.numero = "0020-2";
+        conta2.saldo = 20000;
+        conta2.correntista = cicrano;
+
+        System.out.println("Conta :" + contaF30.numero);
+        System.out.println("Agencia :" + contaF30.agencia);
+        System.out.println("Saldo :" + contaF30.saldo);
+        System.out.println("Nome :" + contaF30.correntista.nome);
+        System.out.println("CPF :" + contaF30.correntista.cpf);
+        System.out.println("Conta :" + contaF30.correntista); //sai a referencia desse objeto
+    }
+}
