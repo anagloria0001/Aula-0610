@@ -1,0 +1,27 @@
+public class Banquinho {
+
+    String nome;
+    Conta[] contas;
+
+
+    double showPatrimonio(){
+        int i;
+        double soma = 0.0;
+        for(i = 0; i < contas.length; i++){
+            soma += this.contas[i].saldo;
+        }
+        return soma;
+    }
+
+    void showContas(){
+        int i;
+        System.out.println("As contas do Banco Gloriosa são:");
+        for(i = 0; i < contas.length; i++) {
+            this.contas[i].show();
+            System.out.println();
+        }
+    }
+
+
+
+}
