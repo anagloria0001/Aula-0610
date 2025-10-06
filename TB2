@@ -1,0 +1,52 @@
+public class TB2 {
+
+    public static void main(String[] args){
+        Banquinho banco = new Banquinho();
+        banco.nome = "Banquinho Glorioso LTDA";
+
+        Cliente gloriano = new Cliente();
+        gloriano.cpf = "111.111.111-22";
+        gloriano.nome = "Gloriano Silva";
+
+        Cliente fernando = new Cliente();
+        fernando.cpf = "111.111.111-11";
+        fernando.nome = "Fernando Trinta";
+
+        Cliente fernanda = new Cliente();
+        fernando.cpf = "111.111.111-12";
+        fernando.nome = "Fernanda Trinta";
+
+        Conta conta2 = new Conta();
+        conta2.agencia = "0020";
+        conta2.numero = "0020-2";
+        conta2.getSaldo() = 20000;
+        conta2.correntista = gloriano;
+
+        Conta contaG30 = new Conta();
+        contaG30.agencia = "0030";
+        contaG30.numero = "0030-3";
+        contaG30.getSaldo() = 50000;
+        contaG30.correntista = fernando;
+
+        Conta contaG40 = new Conta();
+        contaG40.agencia = "0040";
+        contaG40.numero = "0040-3";
+        contaG40.getSaldo() = 10000;
+        contaG40.correntista = fernanda;
+
+        Conta[] contas = new Conta[3];
+        contas[0] = conta2;
+        contas[1] = contaG30;
+        contas[2] = contaG40;
+
+        banco.contas = contas;
+
+        banco.contas[0].show();
+
+        System.out.println("Patrimonio: " + banco.showPatrimonio());
+
+        banco.showContas();
+
+
+    }
+}
