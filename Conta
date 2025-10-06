@@ -5,6 +5,9 @@ public class Conta {
     private double saldo;
     Cliente correntista;
 
+    double getSaldo(){
+        return this.saldo;
+    }
     void debitar(double valor){
         this.saldo -= valor;
     }
@@ -20,3 +23,5 @@ public class Conta {
        this.correntista.show();
       }
 }
+
+
